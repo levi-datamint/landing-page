@@ -51,9 +51,9 @@ export const speakers: Speaker[] = [
     imageUrl: "/hen_cohen.jpeg",
   },
   {
-    name: "דבורה דור",
-    title: "AI Director at Brooks Keret",
-    bio: "מומחית AI, מתמקדת בתקציב מול ביצוע (BVA) באמצעות כלי AI.",
+    name: "Deb Dor",
+    title: "Director of AI at Brooks Keret",
+    bio: "מובילת חדשנות ובינה מלאכותית עם ניסיון רב בהובלת שיפור רווחיות ויעילות, באמצעות שילוב פתרונות AI ואוטומציה בתהליכים פיננסיים בארגונים גלובליים ובסטארטאפים",
     imageUrl: "/deb_dor.jpg",
   },
   {
@@ -61,5 +61,5 @@ export const speakers: Speaker[] = [
     title: "AI & Data Specialist",
     bio: "מתמקד באוטומציה בתהליכי AP באמצעות כלי AI מתקדמים.",
     imageUrl: "/maor_nuwe.jpg",
-  }
+  },
 ];
