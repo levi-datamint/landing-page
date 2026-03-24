@@ -12,6 +12,9 @@ export default function LandingHeroSection({
   applicationUrl,
   sectionRef,
 }: Props) {
+  const [headlineLead, ...headlineRest] = conference.name.split(":");
+  const headlineTail = headlineRest.join(":").trim();
+
   return (
     <section ref={sectionRef} className="bg-[#E4F9F5] py-16 sm:py-20 lg:py-24">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -22,7 +25,15 @@ export default function LandingHeroSection({
             </p>
 
             <h1 className="mt-3 min-w-full text-4xl font-bold leading-tight tracking-tight text-[#40514E] sm:text-5xl lg:text-6xl">
-              {conference.name}
+              {headlineTail ? (
+                <>
+                  {headlineLead}:
+                  <br />
+                  {headlineTail}
+                </>
+              ) : (
+                conference.name
+              )}
             </h1>
 
             <p className="mt-5 max-w-3xl text-lg leading-8 text-[#40514E]">
