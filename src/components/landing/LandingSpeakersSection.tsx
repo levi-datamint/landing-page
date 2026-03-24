@@ -11,42 +11,47 @@ export default function LandingSpeakersSection({
   sectionRef,
 }: Props) {
   return (
-    <section ref={sectionRef} className="flex min-h-screen items-center">
-      <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
-            Speakers
+    <section ref={sectionRef} className="bg-[#E4F9F5] py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl items-center justify-center">
+          <h2 className="text-4xl font-bold tracking-tight text-[#40514E] sm:text-5xl">
+            הדוברים
           </h2>
-          <p className="mt-3 text-slate-700 dark:text-slate-200">
-            A quick preview of the caliber of sessions we’re building. Speakers below are
-            mock data.
-          </p>
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {speakers.map((s) => (
             <div
               key={s.name}
-              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950"
+              className="rounded-2xl border border-[#30E3CA]/40 bg-white p-7 shadow-sm"
             >
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-900 text-sm font-semibold text-white dark:bg-slate-50 dark:text-slate-900">
-                  {s.name
-                    .split(' ')
-                    .slice(0, 2)
-                    .map((part) => part[0])
-                    .join('')}
+              <div className="text-center">
+                <div className="text-lg font-semibold text-[#40514E]">
+                  {s.name}
                 </div>
-                <div>
-                  <div className="text-base font-semibold text-slate-900 dark:text-slate-50">
-                    {s.name}
-                  </div>
-                  <div className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                    {s.title}
-                  </div>
+                <div className="mt-1 text-base text-[#40514E]/80">
+                  {s.title}
                 </div>
               </div>
-              <p className="mt-4 text-sm text-slate-700 dark:text-slate-200">{s.bio}</p>
+
+              <div className="mt-5 flex justify-center">
+                {s.imageUrl ? (
+                  <img
+                    src={s.imageUrl}
+                    alt={s.name}
+                    className="h-36 w-36 rounded-full object-cover ring-2 ring-[#30E3CA]/50"
+                  />
+                ) : (
+                  <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[#11999E] text-2xl font-semibold text-white">
+                    {s.name
+                      .split(' ')
+                      .slice(0, 2)
+                      .map((part) => part[0])
+                      .join('')}
+                  </div>
+                )}
+              </div>
+              <p className="mt-5 text-base leading-7 text-[#40514E]">{s.bio}</p>
             </div>
           ))}
         </div>

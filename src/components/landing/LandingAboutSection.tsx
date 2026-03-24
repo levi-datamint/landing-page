@@ -1,5 +1,5 @@
-import type { Conference } from '../../lib/landingContent';
-import type { RefObject } from 'react';
+import type { Conference } from "../../lib/landingContent";
+import type { RefObject } from "react";
 
 type Props = {
   conference: Conference;
@@ -15,43 +15,61 @@ export default function LandingAboutSection({
   onMeetSpeakers,
 }: Props) {
   return (
-    <section
-      ref={sectionRef}
-      className="flex min-h-screen items-center bg-slate-50/60 dark:bg-slate-900/20"
-    >
-      <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <section ref={sectionRef} className="bg-white py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
-              About
+            <h2 className="text-4xl font-bold tracking-tight text-[#40514E] sm:text-5xl">
+              מה תלמדו בכנס
             </h2>
-            <p className="mt-4 text-slate-700 dark:text-slate-200">
-              This conference is designed for teams who want to move from prototypes to
-              production. We focus on practical patterns, real performance tradeoffs, and
-              developer-friendly workflows.
+            <p className="mt-4 text-lg text-[#40514E]">
+              במהלך הכנס נצלול לעולם ה-AI והאוטומציות ונראה איך מיישמים אותם
+              בפועל:
             </p>
-            <p className="mt-4 text-slate-700 dark:text-slate-200">
-              Submit your application and we will review proposals to build a cohesive,
-              high-signal agenda.
-            </p>
+            <ul className="mt-5 space-y-3 text-lg text-[#40514E]">
+              <li className="flex gap-3">
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
+                שימוש ב-AI לניתוח נתונים פיננסיים.
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
+                אוטומציה של תהליכים כמו התאמות בנקים, חשבוניות ודיווחים.
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
+                זיהוי חריגות וטעויות בזמן אמת.
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
+                שילוב AI במערכות קיימות (ERP, הנה"ח, BI).
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
+                כלים פרקטיים שתוכלו להתחיל להשתמש בהם כבר מחר.
+              </li>
+            </ul>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
-            <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
-              What you’ll get
+          <div className="rounded-2xl border border-[#30E3CA]/40 bg-white p-7 shadow-sm">
+            <h3 className="text-xl font-semibold text-[#40514E]">
+              למי הכנס מתאים
             </h3>
-            <ul className="mt-4 space-y-3 text-slate-700 dark:text-slate-200">
+            <ul className="mt-4 space-y-3 text-lg text-[#40514E]">
               <li className="flex gap-3">
-                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-slate-900 dark:bg-slate-50" />
-                Feedback before the final schedule.
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
+                רואי חשבון.
               </li>
               <li className="flex gap-3">
-                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-slate-900 dark:bg-slate-50" />
-                Clear, modern proposal workflow.
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
+                מנהלי כספים (CFO).
               </li>
               <li className="flex gap-3">
-                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-slate-900 dark:bg-slate-50" />
-                Real-world stories from production teams.
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
+                חשבים.
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
+                כל מי שעוסק בתהליכי פייננס ורוצה להתייעל.
               </li>
             </ul>
 
@@ -59,15 +77,15 @@ export default function LandingAboutSection({
               <button
                 type="button"
                 onClick={onMeetSpeakers}
-                className="inline-flex items-center justify-center rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:text-slate-50"
+                className="inline-flex items-center justify-center rounded-lg border border-[#30E3CA]/70 bg-white px-6 py-3 text-base font-semibold text-[#11999E] shadow-sm transition hover:bg-[#E4F9F5] focus:outline-none focus:ring-2 focus:ring-[#30E3CA]"
               >
-                Meet the speakers
+                הכירו את הדוברים
               </button>
               <a
                 href={applicationUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400"
+                className="inline-flex items-center justify-center rounded-lg bg-[#11999E] px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#40514E] focus:outline-none focus:ring-2 focus:ring-[#30E3CA]"
               >
                 {conference.cta}
               </a>
@@ -78,4 +96,3 @@ export default function LandingAboutSection({
     </section>
   );
 }
-

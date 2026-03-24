@@ -5,27 +5,25 @@ import LandingAboutSection from '../components/landing/LandingAboutSection';
 import LandingSpeakersSection from '../components/landing/LandingSpeakersSection';
 import { conference, speakers } from '../lib/landingContent';
 
-const applicationUrl = 'https://conference.datamint.biz';
+const applicationUrl = 'https://tickchak.co.il/101406';
 
 export default function Landing() {
   const heroRef = useRef<HTMLElement | null>(null);
   const aboutRef = useRef<HTMLElement | null>(null);
   const speakersRef = useRef<HTMLElement | null>(null);
-  const applicationRef = useRef<HTMLElement | null>(null);
 
   const scrollTo = (ref: RefObject<HTMLElement | null>) => {
     ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
-    <div className="min-h-screen">
+    <div dir="rtl" className="min-h-screen bg-white text-right">
       <LandingNav
         conferenceName={conference.name}
         ctaLabel={conference.cta}
         applicationUrl={applicationUrl}
         aboutRef={aboutRef}
         speakersRef={speakersRef}
-        applicationRef={applicationRef}
         onScrollTo={scrollTo}
       />
 
@@ -34,7 +32,6 @@ export default function Landing() {
           conference={conference}
           applicationUrl={applicationUrl}
           sectionRef={heroRef}
-          onScrollToApplication={() => scrollTo(applicationRef)}
         />
 
         <LandingAboutSection
@@ -47,9 +44,9 @@ export default function Landing() {
         <LandingSpeakersSection speakers={speakers} sectionRef={speakersRef} />
       </main>
 
-      <footer className="border-t border-slate-200 py-8 dark:border-slate-800">
-        <div className="mx-auto max-w-6xl px-4 text-sm text-slate-600 dark:text-slate-300 sm:px-6 lg:px-8">
-          © {new Date().getFullYear()} {conference.name}. Built with React.
+      <footer className="border-t border-[#30E3CA]/40 py-8">
+        <div className="mx-auto max-w-7xl px-4 text-base text-[#40514E] sm:px-6 lg:px-8">
+          © {new Date().getFullYear()} {conference.name}. נבנה עבור עתיד הפיננסים.
         </div>
       </footer>
     </div>

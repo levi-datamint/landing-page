@@ -3,36 +3,63 @@ export type Conference = {
   date: string;
   cta: string;
   location: string;
+  tagline: string;
+  audience: string;
+  outcomes: string[];
 };
 
 export type Speaker = {
   name: string;
   title: string;
   bio: string;
+  imageUrl?: string;
 };
 
 export const conference: Conference = {
-  name: 'Datamint Conference 2026',
-  date: 'September 12, 2026',
-  cta: 'Apply Now',
-  location: 'Remote (Online)',
+  name: "העתיד כבר כאן: רואי חשבון בעידן ה-AI",
+  date: "17 במאי 2026",
+  cta: "הירשמו עכשיו",
+  location: "רעננה, ישראל",
+  tagline:
+    "עולם הפייננס משתנה במהירות. כלים מבוססי AI ואוטומציות כבר לא שייכים לעתיד - הם כאן, ומשנים את הדרך שבה רואי חשבון עובדים, מנתחים ומקבלים החלטות.",
+  audience: "אם גם אתם רוצים לשדרג את מחלקת הפייננס - הכנס הזה בדיוק בשבילכם.",
+  outcomes: [
+    "לחסוך שעות של עבודה ידנית",
+    "לצמצם טעויות אנוש",
+    "לקבל תובנות בזמן אמת",
+    "להפוך למחלקת פייננס יעילה ואסטרטגית יותר",
+  ],
 };
 
 export const speakers: Speaker[] = [
   {
-    name: 'Avery Chen',
-    title: 'Staff Engineer, Data Systems',
-    bio: 'Building scalable data pipelines and developer-first tooling.',
+    name: "איתי וינברגר",
+    title: "מנכ״ל ומייסד Datamint",
+    bio: "איתי מוביל את החזון לחיבור בין חדשנות מבוססת AI לבין עבודה פיננסית חכמה, מדויקת ויעילה יותר.",
+    imageUrl: "/itay_weinberger.png",
   },
   {
-    name: 'Maya Rodriguez',
-    title: 'Product Lead, Developer Experience',
-    bio: 'Designing conference sessions that ship real outcomes.',
+    name: "רונן עמוס",
+    title: 'רו"ח (CPA), מרצה ויועץ CFO חיצוני',
+    bio: " מרצה ויועץ חיצוני, המקנה לארגונים טכנולוגיות  AI שמקצרות את זמן הדיווח ומגדילות את הדיוק הכלכלי. מומחה באוטומציה לתהליכים פיננסיים באמצעות כלי AI מתקדמים.",
+    imageUrl: "/ronen_cohen.jpeg",
   },
   {
-    name: 'Noah Patel',
-    title: 'Research Engineer',
-    bio: 'Exploring practical AI workflows for production teams.',
+    name: "חן כהן",
+    title: "VP Finance, visitt",
+    bio: "מתמקד בהפיכת  המחלקה הפיננסית למודרנית המונעת על ידי אוטומציה, תוך דגש חזק על מינוף AI וכלים מתקדמים לשיפור היעילות ותהליכי קבלת ההחלטות.",
+    imageUrl: "/hen_cohen.jpeg",
   },
+  {
+    name: "דבורה דור",
+    title: "AI Director at Brooks Keret",
+    bio: "מומחית AI, מתמקדת בתקציב מול ביצוע (BVA) באמצעות כלי AI.",
+    imageUrl: "/deb_dor.jpg",
+  },
+  {
+    name: "מאור נווה",
+    title: "AI & Data Specialist",
+    bio: "מתמקד באוטומציה בתהליכי AP באמצעות כלי AI מתקדמים.",
+    imageUrl: "/maor_nuwe.jpg",
+  }
 ];
-
