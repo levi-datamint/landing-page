@@ -21,7 +21,7 @@ export default function LandingHeroSection({
               {conference.location}
             </p>
 
-            <h1 className="mt-3 text-4xl font-bold leading-tight tracking-tight text-[#40514E] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 min-w-full text-4xl font-bold leading-tight tracking-tight text-[#40514E] sm:text-5xl lg:text-6xl">
               {conference.name}
             </h1>
 
