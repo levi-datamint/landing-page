@@ -39,11 +39,17 @@ export const speakers: Speaker[] = [
     imageUrl: "/itay_weinberger.png",
   },
   {
-    name: "רונן עמוס",
-    title: 'רו"ח (CPA), מרצה ויועץ CFO חיצוני',
-    bio: " מרצה ויועץ חיצוני, המקנה לארגונים טכנולוגיות  AI שמקצרות את זמן הדיווח ומגדילות את הדיוק הכלכלי. מומחה באוטומציה לתהליכים פיננסיים באמצעות כלי AI מתקדמים.",
-    imageUrl: "/ronen_cohen.jpeg",
+    name: "יונתן שטרן",
+    title: "Founder & CEO of SmartUp Academy",
+    bio: "יונתן שטרן הוא יזם ישראלי ומייסד SmartUp Academy. הוא הקים ומכר מספר חברות, כולל ZoomInfo, ופיתח את שיטת “SmartUp” שמטרתה לעזור ליזמים לבנות חברות רווחיות ויציבות לאורך זמן.",
+    imageUrl: "/yonatan_stern.jpg",
   },
+  // {
+  //   name: "רונן עמוס",
+  //   title: 'רו"ח (CPA), מרצה ויועץ CFO חיצוני',
+  //   bio: " מרצה ויועץ חיצוני, המקנה לארגונים טכנולוגיות  AI שמקצרות את זמן הדיווח ומגדילות את הדיוק הכלכלי. מומחה באוטומציה לתהליכים פיננסיים באמצעות כלי AI מתקדמים.",
+  //   imageUrl: "/ronen_cohen.jpeg",
+  // },
   {
     name: "חן כהן",
     title: "VP Finance, visitt",
@@ -56,10 +62,10 @@ export const speakers: Speaker[] = [
     bio: "מובילת חדשנות ובינה מלאכותית עם ניסיון רב בהובלת שיפור רווחיות ויעילות, באמצעות שילוב פתרונות AI ואוטומציה בתהליכים פיננסיים בארגונים גלובליים ובסטארטאפים",
     imageUrl: "/deb_dor.jpg",
   },
-  {
-    name: "מאור נווה",
-    title: "AI & Data Specialist",
-    bio: "מתמקד באוטומציה בתהליכי AP באמצעות כלי AI מתקדמים.",
-    imageUrl: "/maor_nuwe.jpg",
-  },
+  // {
+  //   name: "מאור נווה",
+  //   title: "AI & Data Specialist",
+  //   bio: "מאור הוא מומחה ל - AI ",
+  //   imageUrl: "/maor_nuwe.jpg",
+  // },
 ];
