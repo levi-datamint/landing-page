@@ -2,8 +2,6 @@ import { type RefObject } from 'react';
 
 type Props = {
   conferenceName: string;
-  ctaLabel: string;
-  applicationUrl: string;
   aboutRef: RefObject<HTMLElement | null>;
   speakersRef: RefObject<HTMLElement | null>;
   onScrollTo: (ref: RefObject<HTMLElement | null>) => void;
@@ -11,8 +9,6 @@ type Props = {
 
 export default function LandingNav({
   conferenceName,
-  ctaLabel,
-  applicationUrl,
   aboutRef,
   speakersRef,
   onScrollTo,

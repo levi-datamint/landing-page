@@ -1,5 +1,5 @@
-import type { Speaker } from '../../lib/landingContent';
-import type { RefObject } from 'react';
+import type { Speaker } from "../../lib/landingContent";
+import type { RefObject } from "react";
 
 type Props = {
   speakers: Speaker[];
@@ -44,10 +44,10 @@ export default function LandingSpeakersSection({
                 ) : (
                   <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[#11999E] text-2xl font-semibold text-white">
                     {s.name
-                      .split(' ')
+                      .split(" ")
                       .slice(0, 2)
                       .map((part) => part[0])
-                      .join('')}
+                      .join("")}
                   </div>
                 )}
               </div>
@@ -59,4 +59,3 @@ export default function LandingSpeakersSection({
     </section>
   );
 }
-

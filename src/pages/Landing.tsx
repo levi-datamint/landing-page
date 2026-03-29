@@ -5,8 +5,6 @@ import LandingAboutSection from '../components/landing/LandingAboutSection';
 import LandingSpeakersSection from '../components/landing/LandingSpeakersSection';
 import { conference, speakers } from '../lib/landingContent';
 
-const applicationUrl = 'https://tickchak.co.il/101406';
-
 export default function Landing() {
   const heroRef = useRef<HTMLElement | null>(null);
   const aboutRef = useRef<HTMLElement | null>(null);
@@ -20,8 +18,6 @@ export default function Landing() {
     <div dir="rtl" className="min-h-screen bg-white text-right">
       <LandingNav
         conferenceName={conference.name}
-        ctaLabel={conference.cta}
-        applicationUrl={applicationUrl}
         aboutRef={aboutRef}
         speakersRef={speakersRef}
         onScrollTo={scrollTo}
@@ -30,13 +26,11 @@ export default function Landing() {
       <main>
         <LandingHeroSection
           conference={conference}
-          applicationUrl={applicationUrl}
           sectionRef={heroRef}
         />
 
         <LandingAboutSection
           conference={conference}
-          applicationUrl={applicationUrl}
           sectionRef={aboutRef}
           onMeetSpeakers={() => scrollTo(speakersRef)}
         />

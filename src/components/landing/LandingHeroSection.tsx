@@ -1,15 +1,14 @@
 import type { Conference } from "../../lib/landingContent";
 import type { RefObject } from "react";
+import { openRegistrationForm } from "../../lib/tickchak";
 
 type Props = {
   conference: Conference;
-  applicationUrl: string;
   sectionRef: RefObject<HTMLElement | null>;
 };
 
 export default function LandingHeroSection({
   conference,
-  applicationUrl,
   sectionRef,
 }: Props) {
   const [headlineLead, ...headlineRest] = conference.name.split(":");
@@ -44,14 +43,13 @@ export default function LandingHeroSection({
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a
-                href={applicationUrl}
-                target="_blank"
-                rel="noreferrer"
+              <button
+                type="button"
+                onClick={openRegistrationForm}
                 className="inline-flex w-full items-center justify-center rounded-xl bg-[#11999E] px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-[#40514E] focus:outline-none focus:ring-2 focus:ring-[#30E3CA] sm:w-auto"
               >
                 {conference.cta}
-              </a>
+              </button>
               <div className="rounded-xl border border-[#30E3CA]/40 bg-white/70 px-4 py-3 text-base text-[#40514E]/90">
                 <span className="font-semibold text-[#40514E]">
                   {conference.date}

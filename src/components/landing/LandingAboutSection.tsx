@@ -1,16 +1,15 @@
 import type { Conference } from "../../lib/landingContent";
 import type { RefObject } from "react";
+import { openRegistrationForm } from "../../lib/tickchak";
 
 type Props = {
   conference: Conference;
-  applicationUrl: string;
   sectionRef: RefObject<HTMLElement | null>;
   onMeetSpeakers: () => void;
 };
 
 export default function LandingAboutSection({
   conference,
-  applicationUrl,
   sectionRef,
   onMeetSpeakers,
 }: Props) {
@@ -72,24 +71,6 @@ export default function LandingAboutSection({
                 כל מי שעוסק בתהליכי פייננס ורוצה להתייעל.
               </li>
             </ul>
-
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <button
-                type="button"
-                onClick={onMeetSpeakers}
-                className="inline-flex items-center justify-center rounded-lg border border-[#30E3CA]/70 bg-white px-6 py-3 text-base font-semibold text-[#11999E] shadow-sm transition hover:bg-[#E4F9F5] focus:outline-none focus:ring-2 focus:ring-[#30E3CA]"
-              >
-                הכירו את הדוברים
-              </button>
-              <a
-                href={applicationUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-lg bg-[#11999E] px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-[#40514E] focus:outline-none focus:ring-2 focus:ring-[#30E3CA]"
-              >
-                {conference.cta}
-              </a>
-            </div>
           </div>
         </div>
       </div>
