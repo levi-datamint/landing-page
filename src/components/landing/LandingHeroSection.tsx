@@ -7,10 +7,7 @@ type Props = {
   sectionRef: RefObject<HTMLElement | null>;
 };
 
-export default function LandingHeroSection({
-  conference,
-  sectionRef,
-}: Props) {
+export default function LandingHeroSection({ conference, sectionRef }: Props) {
   const [headlineLead, ...headlineRest] = conference.name.split(":");
   const headlineTail = headlineRest.join(":").trim();
 
@@ -58,9 +55,14 @@ export default function LandingHeroSection({
                 רעננה
               </div>
             </div>
-
           </div>
-
+          <div className="lg:col-span-5 overflow-hidden rounded-2xl">
+            <img
+              src="/accountant.png"
+              alt="accountant"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
