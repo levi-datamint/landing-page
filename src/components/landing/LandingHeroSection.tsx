@@ -12,7 +12,7 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
   const headlineTail = headlineRest.join(":").trim();
 
   return (
-    <section ref={sectionRef} className="bg-[#E4F9F5] py-16 sm:py-20 lg:py-24">
+    <section ref={sectionRef} className="bg-[#E4F9F5]">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-10">
           <div className="lg:col-span-7">
