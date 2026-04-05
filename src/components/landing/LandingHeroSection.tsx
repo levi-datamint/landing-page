@@ -25,7 +25,7 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#E4F9F5] pb-14 pt-8 sm:pb-16 sm:pt-10"
+      className="bg-[#E4F9F5] pt-8 sm:pt-10"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-10">
@@ -68,10 +68,22 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
                 <p className="text-lg font-semibold text-[#40514E]">
                   {conference.date}
                 </p>
-                <p>{conference.receptionNote}</p>
-                <p className="font-medium text-[#40514E]">
-                  {conference.eventEndNote}
-                </p>
+                <ul className="mt-1 space-y-2.5 border-t border-[#30E3CA]/25 pt-3">
+                  {conference.schedule.map((slot) => (
+                    <li
+                      key={slot.timeRange}
+                      className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 text-[#40514E]"
+                    >
+                      <span className="whitespace-nowrap font-semibold tabular-nums text-[#11999E]">
+                        {slot.timeRange}
+                      </span>
+                      <span className="text-[#11999E]/45" aria-hidden>
+                        |
+                      </span>
+                      <span>{slot.label}</span>
+                    </li>
+                  ))}
+                </ul>
               </MetaCard>
               <MetaCard label="איפה">
                 <p className="text-lg font-semibold text-[#40514E]">

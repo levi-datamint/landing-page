@@ -1,10 +1,14 @@
+export type ScheduleSlot = {
+  timeRange: string;
+  label: string;
+};
+
 export type Conference = {
   name: string;
   date: string;
   cta: string;
   location: string;
-  receptionNote: string;
-  eventEndNote: string;
+  schedule: ScheduleSlot[];
   mapEmbedUrl: string;
   mapOpenUrl: string;
   tagline: string;
@@ -24,8 +28,12 @@ export const conference: Conference = {
   date: "17 במאי 2026",
   cta: "הירשמו עכשיו",
   location: "הפנינה 2, רעננה",
-  receptionNote: "9:30 עד 10:00 — התכנסות",
-  eventEndNote: "10:00 עד 14:00 — הרצאות",
+  schedule: [
+    { timeRange: "09:30–10:00", label: "התכנסות ומינגלינג" },
+    { timeRange: "10:00–11:30", label: "הרצאות" },
+    { timeRange: "11:30–12:00", label: "מינגלינג ונטוורקינג" },
+    { timeRange: "12:00–14:00", label: "המשך הרצאות" },
+  ],
   mapEmbedUrl:
     "https://www.openstreetmap.org/export/embed.html?bbox=34.8870%2C32.1740%2C34.8935%2C32.1785&layer=mapnik&marker=32.1757457%2C34.8900512",
   mapOpenUrl:
