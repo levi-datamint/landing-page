@@ -28,23 +28,19 @@ export default function LandingAboutSection({
             <ul className="mt-5 space-y-3 text-lg text-[#40514E]">
               <li className="flex gap-3">
                 <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
-                שימוש ב-AI לניתוח נתונים פיננסיים.
+                הטמעת כלי AI במחלקות פייננס.
               </li>
               <li className="flex gap-3">
                 <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
-                אוטומציה של תהליכים כמו התאמות בנקים, חשבוניות ודיווחים.
+                תקציב מול ביצוע אוטומטי.
               </li>
               <li className="flex gap-3">
                 <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
-                זיהוי חריגות וטעויות בזמן אמת.
+                תהליכי עבודה עם AI ויצירת workflows.
               </li>
               <li className="flex gap-3">
                 <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
-                שילוב AI במערכות קיימות (ERP, הנה"ח, BI).
-              </li>
-              <li className="flex gap-3">
-                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
-                כלים פרקטיים שתוכלו להתחיל להשתמש בהם כבר מחר.
+                יזמות וחדשנות בעידן החדש.
               </li>
             </ul>
           </div>

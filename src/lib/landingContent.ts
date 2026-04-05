@@ -3,6 +3,10 @@ export type Conference = {
   date: string;
   cta: string;
   location: string;
+  receptionNote: string;
+  eventEndNote: string;
+  mapEmbedUrl: string;
+  mapOpenUrl: string;
   tagline: string;
   audience: string;
   outcomes: string[];
@@ -19,7 +23,14 @@ export const conference: Conference = {
   name: "העתיד כבר כאן: רואי חשבון בעידן ה-AI",
   date: "17 במאי 2026",
   cta: "הירשמו עכשיו",
-  location: "רעננה, ישראל",
+  location: "הפנינה 2, רעננה",
+  receptionNote: "9:30 עד 10:00 — התכנסות",
+  eventEndNote: "10:00 עד 14:00 — הרצאות",
+  mapEmbedUrl:
+    "https://www.openstreetmap.org/export/embed.html?bbox=34.8870%2C32.1740%2C34.8935%2C32.1785&layer=mapnik&marker=32.1757457%2C34.8900512",
+  mapOpenUrl:
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent("הפנינה 2, רעננה"),
   tagline:
     "עולם הפייננס משתנה במהירות. כלים מבוססי AI ואוטומציות כבר לא שייכים לעתיד - הם כאן, ומשנים את הדרך שבה רואי חשבון עובדים, מנתחים ומקבלים החלטות.",
   audience: "אם גם אתם רוצים לשדרג את מחלקת הפייננס - הכנס הזה בדיוק בשבילכם.",
