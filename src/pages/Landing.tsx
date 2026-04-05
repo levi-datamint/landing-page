@@ -29,11 +29,7 @@ export default function Landing() {
           sectionRef={heroRef}
         />
 
-        <LandingAboutSection
-          conference={conference}
-          sectionRef={aboutRef}
-          onMeetSpeakers={() => scrollTo(speakersRef)}
-        />
+        <LandingAboutSection sectionRef={aboutRef} />
 
         <LandingSpeakersSection speakers={speakers} sectionRef={speakersRef} />
       </main>

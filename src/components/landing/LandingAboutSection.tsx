@@ -1,18 +1,10 @@
-import type { Conference } from "../../lib/landingContent";
 import type { RefObject } from "react";
-import { openRegistrationForm } from "../../lib/tickchak";
 
 type Props = {
-  conference: Conference;
   sectionRef: RefObject<HTMLElement | null>;
-  onMeetSpeakers: () => void;
 };
 
-export default function LandingAboutSection({
-  conference,
-  sectionRef,
-  onMeetSpeakers,
-}: Props) {
+export default function LandingAboutSection({ sectionRef }: Props) {
   return (
     <section ref={sectionRef} className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
