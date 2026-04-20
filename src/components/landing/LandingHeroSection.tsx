@@ -25,7 +25,7 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#E4F9F5] pt-8 sm:pt-10"
+      className="bg-[#E4F9F5] pt-8 pb-8 sm:pt-10 sm:pb-10"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-10">
@@ -63,7 +63,7 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
               </button>
             </div>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            <div className="mt-8 grid gap-4 pb-6 sm:grid-cols-2 sm:pb-8">
               <MetaCard label="מתי">
                 <p className="text-lg font-semibold text-[#40514E]">
                   {conference.date}
@@ -100,12 +100,12 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
               </MetaCard>
             </div>
           </div>
-          <div className="lg:col-span-5 lg:sticky lg:top-28">
-            <div className="overflow-hidden rounded-2xl">
+          <div className="flex flex-col justify-end lg:col-span-5 lg:min-h-0 lg:self-stretch">
+            <div className="shrink-0 overflow-hidden rounded-2xl">
               <img
                 src="/accountant.png"
                 alt="איור לכנס"
-                className="aspect-4/5 h-full w-full object-cover sm:aspect-auto sm:max-h-[min(640px,70vh)] lg:max-h-none lg:min-h-112"
+                className="block aspect-4/5 h-full w-full object-cover sm:aspect-auto sm:max-h-[min(640px,70vh)] lg:max-h-none lg:min-h-112 lg:object-bottom"
               />
             </div>
           </div>
