@@ -1,2 +1,6 @@
 @import "tailwindcss";
 
+.tickchak-form-button {
+  display: none !important;
+}
+

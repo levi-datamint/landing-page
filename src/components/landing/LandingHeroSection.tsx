@@ -25,7 +25,7 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#E4F9F5] pt-8 pb-8 sm:pt-10 sm:pb-10"
+      className="bg-[#E4F9F5] pt-8 pb-28 sm:pt-10 sm:pb-10"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-10">
@@ -53,11 +53,11 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
               {conference.audience}
             </p>
 
-            <div className="mt-8">
+            <div className="fixed inset-x-0 bottom-25 z-40 flex justify-center px-4">
               <button
                 type="button"
                 onClick={openRegistrationForm}
-                className="inline-flex w-full items-center justify-center rounded-xl bg-[#11999E] px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-[#40514E] focus:outline-none focus:ring-2 focus:ring-[#30E3CA] sm:w-auto"
+                className="hover:cursor-pointer inline-flex w-full max-w-md items-center justify-center rounded-xl bg-[#11999E] px-8 py-4 text-lg font-semibold text-white shadow-sm transition hover:bg-[#40514E] focus:outline-none focus:ring-2 focus:ring-[#30E3CA] sm:w-auto"
               >
                 {conference.cta}
               </button>
