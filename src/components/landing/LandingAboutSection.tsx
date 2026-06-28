@@ -24,7 +24,7 @@ export default function LandingAboutSection({ sectionRef }: Props) {
               </li>
               <li className="flex gap-3">
                 <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
-                תקציב מול ביצוע אוטומטי.
+                תקציב מול ביצוע, תזרים מזומנים וגבייה.
               </li>
               <li className="flex gap-3">
                 <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
@@ -33,6 +33,10 @@ export default function LandingAboutSection({ sectionRef }: Props) {
               <li className="flex gap-3">
                 <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
                 יזמות וחדשנות בעידן החדש.
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-3 h-2 w-2 flex-none rounded-full bg-[#11999E]" />
+                Claude (Cowork & Code), Copilot{" "}
               </li>
             </ul>
           </div>
