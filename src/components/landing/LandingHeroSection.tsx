@@ -7,6 +7,17 @@ type Props = {
   sectionRef: RefObject<HTMLElement | null>;
 };
 
+function LocationText({ venue, address }: { venue: string; address: string }) {
+  return (
+    <>
+      <bdi dir="rtl">{address}</bdi>{" "}
+      <bdi dir="ltr" className="inline-block">
+        {venue}:
+      </bdi>
+    </>
+  );
+}
+
 function MetaCard({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div className="rounded-2xl border border-[#30E3CA]/45 bg-white/85 p-5 shadow-sm backdrop-blur-sm">
@@ -31,7 +42,10 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
         <div className="grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-10">
           <div className="lg:col-span-7">
             <p className="text-base font-medium text-[#11999E]">
-              {conference.location}
+              <LocationText
+                venue={conference.location.venue}
+                address={conference.location.address}
+              />
             </p>
 
             <h1 className="mt-3 min-w-full text-4xl font-bold leading-tight tracking-tight text-[#40514E] sm:text-5xl lg:text-6xl">
@@ -87,7 +101,10 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
               </MetaCard>
               <MetaCard label="איפה">
                 <p className="text-lg font-semibold text-[#40514E]">
-                  {conference.location}
+                  <LocationText
+                    venue={conference.location.venue}
+                    address={conference.location.address}
+                  />
                 </p>
                 <a
                   href={conference.mapOpenUrl}

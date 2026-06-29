@@ -3,11 +3,16 @@ export type ScheduleSlot = {
   label: string;
 };
 
+export type Location = {
+  venue: string;
+  address: string;
+};
+
 export type Conference = {
   name: string;
   date: string;
   cta: string;
-  location: string;
+  location: Location;
   schedule: ScheduleSlot[];
   mapEmbedUrl: string;
   mapOpenUrl: string;
@@ -27,7 +32,10 @@ export const conference: Conference = {
   name: "העתיד כבר כאן: רואי חשבון בעידן ה-AI",
   date: "16 ביולי 2026",
   cta: "הירשמו עכשיו",
-  location:  " רעננה, מיקום מדויק בהמשך",
+  location: {
+    venue: "SAP offices",
+    address: "אלי הורביץ 14, רעננה",
+  },
   schedule: [
     { timeRange: "09:30–10:00", label: "התכנסות ומינגלינג" },
     { timeRange: "10:00–11:30", label: "הרצאות" },
@@ -38,7 +46,7 @@ export const conference: Conference = {
     "https://www.openstreetmap.org/export/embed.html?bbox=34.8870%2C32.1740%2C34.8935%2C32.1785&layer=mapnik&marker=32.1757457%2C34.8900512",
   mapOpenUrl:
     "https://www.google.com/maps/search/?api=1&query=" +
-    encodeURIComponent("הפנינה 2, רעננה"),
+    encodeURIComponent("אלי הורביץ 14, רעננה"),
   tagline:
     "עולם הפייננס משתנה במהירות. כלים מבוססי AI ואוטומציות כבר לא שייכים לעתיד - הם כאן, ומשנים את הדרך שבה רואי חשבון עובדים, מנתחים ומקבלים החלטות.",
   audience: "אם גם אתם רוצים לשדרג את מחלקת הפייננס - הכנס הזה בדיוק בשבילכם.",
