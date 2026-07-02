@@ -106,6 +106,9 @@ export default function LandingHeroSection({ conference, sectionRef }: Props) {
                     address={conference.location.address}
                   />
                 </p>
+                <p className="text-base text-[#40514E]">
+                  {conference.location.parkingNote}
+                </p>
                 <a
                   href={conference.mapOpenUrl}
                   target="_blank"

@@ -6,6 +6,7 @@ export type ScheduleSlot = {
 export type Location = {
   venue: string;
   address: string;
+  parkingNote: string;
 };
 
 export type Conference = {
@@ -35,6 +36,7 @@ export const conference: Conference = {
   location: {
     venue: "SAP offices",
     address: "אלי הורביץ 14, רעננה",
+    parkingNote: "חנייה חינם בחניית האורחים של SAP",
   },
   schedule: [
     { timeRange: "09:30–10:00", label: "התכנסות ומינגלינג" },
